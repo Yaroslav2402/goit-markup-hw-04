@@ -43,6 +43,8 @@ img {
 .border-box {
   background-color: var(--color-background);
   border-bottom: 1px solid var(--color-border);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 /* Header */
 .header-container {
@@ -122,8 +124,8 @@ img {
     url(../images/people-office.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
-  min-width: 1440px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 .container-hero {
   width: 496px;
@@ -322,10 +324,13 @@ img {
   border: 1px solid var(--color-icon);
   border-radius: 4px;
 }
-.customers-icon:hover,
-.customers-icon:focus {
-  fill: var(--color-hover);
+.customers-link:hover,
+.customers-link:focus {
   border-color: var(--color-hover);
+}
+.customers-link:hover .customers-icon,
+.customers-link:focus .customers-icon {
+  fill: var(--color-hover);
 }
 .section-customers {
   padding-top: 130px;
@@ -384,12 +389,9 @@ img {
   gap: 16px;
 }
 /* Portfolio */
-.border-box-portfolio:hover {
-  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-}
 .section-portfolio {
-  padding: 120px 0;
+  padding-top: 96px;
+  padding-bottom: 120px;
 }
 .button-portfolio {
   color: var(--color-logo-button);
